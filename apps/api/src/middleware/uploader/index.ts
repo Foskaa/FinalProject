@@ -5,9 +5,6 @@ export const uploader = (req: Request, res: Response, next: NextFunction) => {
     const uploads = uploadMulter.fields([{ name: 'images', maxCount: 2 }])
     const { userId, authorizationRole } = req.body
 
-    console.log(userId, '< dari uploader')
-    console.log(authorizationRole, '< dari uploader')
-
     uploads(req, res, (err) => {
         try {
             if (err) throw { msg: err?.message, status: 400 }

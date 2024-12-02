@@ -9,7 +9,7 @@ export default function HOCLoading({ children }: { children: ReactNode }) {
     useEffect(() => {
         setTimeout(() => {
             setIsLoading(false)
-        }, 3000)
+        }, 2000)
     }, [])
 
     if (isLoading == true) return (
